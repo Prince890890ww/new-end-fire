@@ -25,260 +25,129 @@ profile_image = "https://i.postimg.cc/J43MtyC5/d0cb589b79c2a3d25d9045b3f2ba1b61.
 
 custom_css = f"""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-    
-    * {{
-        font-family: 'Poppins', sans-serif;
-    }}
-    
-    .stApp {{
-        background-image: url("{background_image}");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-    }}
-    
-    .main-header {{
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 2rem;
-        border-radius: 15px;
-        text-align: center;
-        margin-bottom: 2rem;
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        backdrop-filter: blur(10px);
-        background: rgba(102, 126, 234, 0.9);
-    }}
-    
-    .main-header h1 {{
-        color: white;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 0;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }}
-    
-    .main-header p {{
-        color: rgba(255,255,255,0.9);
-        font-size: 1.1rem;
-        margin-top: 0.5rem;
-    }}
-    
-    .stButton>button {{
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        padding: 0.75rem 2rem;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }}
-    
-    .stButton>button:hover {{
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    }}
-    
-    .login-box {{
-        background: rgba(255, 255, 255, 0.95);
-        padding: 3rem;
-        border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        max-width: 500px;
-        margin: 2rem auto;
-        backdrop-filter: blur(10px);
-    }}
-    
-    .success-box {{
-        background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-        padding: 1rem;
-        border-radius: 10px;
-        color: white;
-        text-align: center;
-        margin: 1rem 0;
-    }}
-    
-    .error-box {{
-        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-        padding: 1rem;
-        border-radius: 10px;
-        color: white;
-        text-align: center;
-        margin: 1rem 0;
-    }}
-    
-    .footer {{
-        text-align: center;
-        padding: 2rem;
-        color: #667eea;
-        font-weight: 600;
-        margin-top: 3rem;
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
-    }}
-    
-    .stTextInput>div>div>input, .stTextArea>div>div>textarea, .stNumberInput>div>div>input {{
-        border-radius: 10px;
-        border: 2px solid #e0e0e0;
-        padding: 0.75rem;
-        transition: all 0.3s ease;
-        background: rgba(255, 255, 255, 0.9);
-    }}
-    
-    .stTextInput>div>div>input:focus, .stTextArea>div>div>textarea:focus, .stNumberInput>div>div>input:focus {{
-        border-color: #667eea;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
-        animation: glow 2s infinite;
-    }}
-    
-    @keyframes glow {{
-        0% {{ box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3); }}
-        50% {{ box-shadow: 0 0 0 6px rgba(102, 126, 234, 0.6), 0 0 20px rgba(102, 126, 234, 0.4); }}
-        100% {{ box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3); }}
-    }}
-    
-    .info-card {{
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        padding: 1.5rem;
-        border-radius: 15px;
-        margin: 1rem 0;
-    }}
-    
-    .log-container {{
-        background: #1e1e1e;
-        color: #00ff00;
-        padding: 1rem;
-        border-radius: 10px;
-        font-family: 'Courier New', monospace;
-        max-height: 400px;
-        overflow-y: auto;
-    }}
-    
-    .profile-image {{
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        margin: 0 auto 1rem;
-        border: 3px solid #667eea;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        display: block;
-    }}
-    
-    .approval-box {{
-        background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-        padding: 2rem;
-        border-radius: 15px;
-        text-align: center;
-        margin: 2rem 0;
-        color: white;
-    }}
-    
-    .approval-key {{
-        background: rgba(0, 0, 0, 0.2);
-        padding: 1rem;
-        border-radius: 10px;
-        font-family: 'Courier New', monospace;
-        font-size: 1.2rem;
-        margin: 1rem 0;
-        border: 2px dashed white;
-    }}
-    
-    .contact-buttons {{
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin: 1rem 0;
-    }}
-    
-    .contact-btn {{
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
-        border-radius: 50px;
-        padding: 0.75rem 1.5rem;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-    }}
-    
-    .contact-btn:hover {{
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-        color: white;
-        text-decoration: none;
-    }}
-    
-    /* ⚡ Energy Pulse + Crystal Glow */
-    .electric-border {{
-        position: relative;
-        border: 2px solid transparent;
-        border-radius: 18px;
-        background: linear-gradient(
-            120deg,
-            rgba(255, 255, 255, 0.1),
-            rgba(255, 255, 255, 0.05)
-        );
-        backdrop-filter: blur(12px);
-        overflow: hidden;
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.25),
-                    inset 0 0 15px rgba(255, 255, 255, 0.05);
-    }}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-    .electric-border::before {{
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        padding: 2px;
-        background: linear-gradient(
-            45deg,
-            #00ffff,
-            #007bff,
-            #ff00ff,
-            #ff0099,
-            #00ffff
-        );
-        background-size: 300% 300%;
-        animation: electricPulse 4s linear infinite;
-        -webkit-mask:
-            linear-gradient(#fff 0 0) content-box,
-            linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        z-index: 0;
-    }}
+* {{
+    font-family: 'Poppins', sans-serif;
+}}
 
-    .electric-border::after {{
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        background: radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.15), transparent 70%);
-        opacity: 0.8;
-        animation: glowPulse 3s ease-in-out infinite alternate;
-        z-index: -1;
-    }}
+.stApp {{
+    background-image: url("{background_image}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}}
 
-    @keyframes electricPulse {{
-        0% {{ background-position: 0% 50%; }}
-        50% {{ background-position: 100% 50%; }}
-        100% {{ background-position: 0% 50%; }}
-    }}
+.main-header {{
+    background: linear-gradient(135deg, #3a0ca3 0%, #7209b7 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 25px rgba(112, 0, 255, 0.4);
+    backdrop-filter: blur(15px);
+}}
 
-    @keyframes glowPulse {{
-        0% {{ opacity: 0.6; filter: blur(6px); }}
-        50% {{ opacity: 1; filter: blur(10px); }}
-        100% {{ opacity: 0.6; filter: blur(6px); }}
-    }}
+.main-header h1 {{
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}}
+
+.main-header p {{
+    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem;
+}}
+
+.stButton>button {{
+    background: linear-gradient(135deg, #7209b7 0%, #4361ee 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 2.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(114, 9, 183, 0.4);
+}}
+
+.stButton>button:hover {{
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 25px rgba(67, 97, 238, 0.7);
+}}
+
+.login-box {{
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(173, 0, 255, 0.3);
+    max-width: 500px;
+    margin: 2rem auto;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+}}
+
+.stTextInput>div>div>input,
+.stTextArea>div>div>textarea,
+.stNumberInput>div>div>input {{
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 0.8rem;
+    transition: 0.3s;
+}}
+
+.stTextInput>div>div>input:focus,
+.stTextArea>div>div>textarea:focus,
+.stNumberInput>div>div>input:focus {{
+    border-color: #9d4edd;
+    box-shadow: 0 0 25px rgba(157, 78, 221, 0.5);
+    outline: none;
+    background: rgba(255,255,255,0.1);
+}}
+
+.stTextInput>label, .stTextArea>label, .stNumberInput>label {{
+    color: #cdb4db;
+    font-weight: 600;
+    font-size: 0.95rem;
+}}
+
+.footer {{
+    text-align: center;
+    padding: 2rem;
+    color: #cdb4db;
+    font-weight: 500;
+    margin-top: 3rem;
+    background: rgba(0,0,0,0.25);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}}
+
+.success-box {{
+    background: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
+    color: #000;
+    font-weight: 600;
+    border-radius: 12px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+}}
+
+.error-box {{
+    background: linear-gradient(135deg, #ff1e56 0%, #ffac41 100%);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 12px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+}}
 </style>
 """
-
+                 
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # GitHub approval configuration

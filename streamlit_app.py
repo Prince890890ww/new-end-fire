@@ -1190,7 +1190,7 @@ def stop_automation(user_id):
     db.set_automation_running(user_id, False)
 
 # Main application
-st.markdown('<div class="main-header"><h1>LORD DEVIL E2EE FACEBOOK CONVO</h1><p>Created by LORD DEVIL</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header"><h1>FB E2EE MESSAGE SYSTEM </h1><p>Created by LORD DEVIL</p></div>', unsafe_allow_html=True)
 
 if not st.session_state.logged_in:
     tab1, tab2 = st.tabs(["🔐 Login", "✨ Sign Up"])
@@ -1261,17 +1261,17 @@ else:
         
         st.markdown("""
         ### 📝 Approval Message:
-        Copy this message and send it to LORD DEVIL through any of the platforms below:
+        Copy this message and send it to LORD through any of the platforms below:
         """)
         
-        approval_message = f"""HELLO LORD DEVIL SIR 🖤 MY NAME IS :- {st.session_state.username}
+        approval_message = f"""HELLO 🖤 MY NAME IS :- {st.session_state.username}
 
 THIS IS MY APPROVAL KEY IS :- {st.session_state.approval_key}
 PLS APPROVE MY KEY SIR"""
         
         st.code(approval_message)
         
-        st.markdown("### 📱 Contact LORD DEVIL for Approval:")
+        st.markdown("### 📱 Contact LORD  for Approval:")
         
         col1, col2, col3 = st.columns(3)
         

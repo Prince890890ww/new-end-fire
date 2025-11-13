@@ -23,7 +23,7 @@ st.set_page_config(
 background_image = "https://i.postimg.cc/RVtxyW0M/84552f616cd851df91e78efc3ea85131.jpg"
 profile_image = "https://i.postimg.cc/J43MtyC5/d0cb589b79c2a3d25d9045b3f2ba1b61.jpg"
 
- custom_css = f"""
+custom_css = f"""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
     

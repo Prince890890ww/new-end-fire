@@ -247,7 +247,7 @@ custom_css = f"""
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # GitHub approval configuration
-GITHUB_RAW_URL = "https://raw.githubusercontent.com/deepakdhurve6588-debug/OPX/7927c1b99651e001949f01d2777be8bb948b795d/app.txt"
+GITHUB_RAW_URL = "https://raw.githubusercontent.com/deepakdhurve6588-debug/OPX/main/app.txt"
 CONTACT_LINKS = {
     "whatsapp": "https://wa.me/",
     "telegram": "https://t.me/", 

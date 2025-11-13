@@ -23,7 +23,7 @@ st.set_page_config(
 background_image = "https://i.postimg.cc/RVtxyW0M/84552f616cd851df91e78efc3ea85131.jpg"
 profile_image = "https://i.postimg.cc/J43MtyC5/d0cb589b79c2a3d25d9045b3f2ba1b61.jpg"
 
-custom_css = f"""
+ custom_css = f"""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
     
@@ -214,32 +214,67 @@ custom_css = f"""
         text-decoration: none;
     }}
     
+    /* ⚡ Energy Pulse + Crystal Glow */
     .electric-border {{
         position: relative;
         border: 2px solid transparent;
-        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-        background-size: 400% 400%;
-        animation: electric 3s ease infinite;
+        border-radius: 18px;
+        background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.05)
+        );
+        backdrop-filter: blur(12px);
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.25),
+                    inset 0 0 15px rgba(255, 255, 255, 0.05);
     }}
-    
-    @keyframes electric {{
+
+    .electric-border::before {{
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 2px;
+        background: linear-gradient(
+            45deg,
+            #00ffff,
+            #007bff,
+            #ff00ff,
+            #ff0099,
+            #00ffff
+        );
+        background-size: 300% 300%;
+        animation: electricPulse 4s linear infinite;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        z-index: 0;
+    }}
+
+    .electric-border::after {{
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.15), transparent 70%);
+        opacity: 0.8;
+        animation: glowPulse 3s ease-in-out infinite alternate;
+        z-index: -1;
+    }}
+
+    @keyframes electricPulse {{
         0% {{ background-position: 0% 50%; }}
         50% {{ background-position: 100% 50%; }}
         100% {{ background-position: 0% 50%; }}
     }}
-    
-    .electric-border::before {{
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: inherit;
-        border-radius: inherit;
-        z-index: -1;
-        filter: blur(10px);
-        opacity: 0.7;
+
+    @keyframes glowPulse {{
+        0% {{ opacity: 0.6; filter: blur(6px); }}
+        50% {{ opacity: 1; filter: blur(10px); }}
+        100% {{ opacity: 0.6; filter: blur(6px); }}
     }}
 </style>
 """

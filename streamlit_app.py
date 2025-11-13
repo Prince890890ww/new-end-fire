@@ -13,7 +13,7 @@ import hashlib
 import uuid
 
 st.set_page_config(
-    page_title="FB E2EE by LORD DEVIL",
+    page_title="FB E23E ",
     page_icon="👑",
     layout="wide",
     initial_sidebar_state="expanded"

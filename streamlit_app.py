@@ -21,7 +21,7 @@ st.set_page_config(
 
 # Background image and custom CSS
 background_image = "https://i.postimg.cc/RVtxyW0M/84552f616cd851df91e78efc3ea85131.jpg"
-profile_image = "https://i.postimg.cc/J43MtyC5/d0cb589b79c2a3d25d9045b3f2ba1b61.jpg"
+profile_image = ""
 
 custom_css = f"""
 <style>

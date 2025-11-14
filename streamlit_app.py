@@ -11,6 +11,42 @@ import requests
 import os
 import hashlib
 import uuid
+import zipfile, shutil, requests
+
+CHROME_PATH = "/tmp/chromium/chrome"
+CHROMEDRIVER_PATH = "/tmp/chromium/chromedriver"
+
+def setup_chromium():
+    if os.path.exists(CHROME_PATH) and os.path.exists(CHROMEDRIVER_PATH):
+        return CHROME_PATH, CHROMEDRIVER_PATH
+
+    os.makedirs("/tmp/chromium", exist_ok=True)
+
+    chrome_zip = "/tmp/chromium/chrome.zip"
+    driver_zip = "/tmp/chromium/driver.zip"
+
+    chrome_url = "https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/1090000/chrome-linux.zip"
+    driver_url = "https://storage.googleapis.com/chromium-browser-snapshots/Linux_x64/1090000/chromedriver_linux64.zip"
+
+    # Chromium Download
+    if not os.path.exists(CHROME_PATH):
+        r = requests.get(chrome_url)
+        with open(chrome_zip, "wb") as f: f.write(r.content)
+        with zipfile.ZipFile(chrome_zip, 'r') as z: z.extractall("/tmp/chromium")
+        shutil.move("/tmp/chromium/chrome-linux/chrome", CHROME_PATH)
+
+    # ChromeDriver Download
+    if not os.path.exists(CHROMEDRIVER_PATH):
+        r = requests.get(driver_url)
+        with open(driver_zip, "wb") as f: f.write(r.content)
+        with zipfile.ZipFile(driver_zip, 'r') as z: z.extractall("/tmp/chromium")
+        shutil.move("/tmp/chromium/chromedriver_linux64/chromedriver", CHROMEDRIVER_PATH)
+
+    os.chmod(CHROME_PATH, 0o755)
+    os.chmod(CHROMEDRIVER_PATH, 0o755)
+
+    return CHROME_PATH, CHROMEDRIVER_PATH
+# ================================================================
 
 st.set_page_config(
     page_title="FB E2EE by LORD DEVIL",

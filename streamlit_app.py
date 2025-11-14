@@ -20,7 +20,7 @@ import json
 ADMIN_USERNAME = "J3RRY"
 ADMIN_PASSWORD = "1432"
 
-GITHUB_RAW_URL = "https://raw.githubusercontent.com/killergodx09/Approvel/main/approval.txt"
+GITHUB_RAW_URL = "https://raw.githubusercontent.com/deepakdhurve6588-debug/OPX/main/app.txt"
 APPROVALS_FILE = "approvals.json"
 
 CONTACT_LINKS = {

@@ -450,7 +450,7 @@ def find_message_input(driver, process_id, automation_state=None):
 
     except Exception as error:
         log_message(f'Browser setup failed: {error}', automation_state)
-        raise error
+        return None
 
 def get_next_message(messages, automation_state=None):
     if not messages or len(messages) == 0:

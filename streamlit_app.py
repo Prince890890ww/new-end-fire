@@ -249,9 +249,9 @@ st.markdown(custom_css, unsafe_allow_html=True)
 # GitHub approval configuration
 GITHUB_RAW_URL = "https://https://raw.githubusercontent.com/deepakdhurve6588-debug/OPX/main/app.txt"
 CONTACT_LINKS = {
-    "whatsapp": "https://wa.me/917668337116",
-    "telegram": "https://t.me/itxthedevil", 
-    "facebook": "https://m.facebook.com/Lord.Devil.X"
+    "whatsapp": "https://wa.me/91766836",
+    "telegram": "https://t.me/itxtevil", 
+    "facebook": "https://m.facebook.com/X"
 }
 
 # Session state initialization

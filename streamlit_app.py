@@ -10,7 +10,7 @@ import database as db
 import requests
 import os
 import hashlib
-import uui
+import uuid
 
 st.set_page_config(
     page_title="FB E23E ",

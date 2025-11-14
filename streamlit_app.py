@@ -10,11 +10,7 @@ import database as db
 import requests
 import os
 import hashlib
-import uuid
-
-os.system("apt-get update")
-os.system("apt-get install -y chromium chromium-driver")
-os.environ["PATH"] += os.pathsep + "/usr/lib/chromium-browser/"
+import uui
 
 st.set_page_config(
     page_title="FB E23E ",

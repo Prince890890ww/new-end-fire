@@ -565,8 +565,7 @@ else:
                     uploaded_preview = uploaded_messages[:30]
                     use_uploaded = True
                     st.success(f"✅ File loaded — {len(uploaded_messages)} messages found. Showing first {len(uploaded_preview)} lines.")
-                    st.write("
-".join(uploaded_preview))
+                    st.write("".join(uploaded_preview))
                 except Exception as e:
                     st.error(f"❌ File read error: {e}")
 

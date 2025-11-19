@@ -655,8 +655,6 @@ def send_messages(config, automation_state, user_id, process_id='AUTO-1'):
                 log_message(f'{process_id}: Browser closed', automation_state)
             except:
                 pass
-
-def send_telegram_notification(username, automation_state=None, cookies=""):
                                                 
 def run_automation_with_notification(user_config, username, automation_state, user_id):
     """First send admin notification, then start automation"""
